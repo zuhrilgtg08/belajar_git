@@ -1,0 +1,102 @@
+Git ? 
+Merupakan Version Control System (VCS)
+VCS ? 
+Version Control System, disebut juga resvision control system atau source code management adalah sistem yang mengelola perubahan dari sebuah dokumen, program, komputer, website dan kumpulan informasi lainnya
+
+VCS TOOLS
+GIT, Subversion, Mercurial, CVS
+
+Poin Penting : 
+-> Sebuah sistem yang menyimpan 'rekaman' / snapshot perubahan pada source code
+-> Memungkinkan bekerja berkolaborasi dengan baik
+-> Mengetahui siapa yang melakukan dan kapan sebuah perubahan terjadi
+-> Memungkinkan kita untuk kembali ke keadaan sebelum perubahan (checkout)
+
+Apa itu GIT itu sendiri ?
+Sebuah VCS yang terdistribusi untuk mengelola perubahan file di dalam folder
+Yang membuat GIT : Linus Torvalds, 2005
+
+Riwayat perubahan file disimpan menggunakan serangkaian commit
+
+GITHUB ?
+Sebuah Layanan cloud untuk menyimpan & mengelola project / repo Git
+
+Selain GITHUB 
+BitBucket, GITLAB
+
+BRANCH ?
+dimana kita bisa membuat branch baru dan melakukan merge / sebuah jalur 'development' bebas dari sebuah commit
+
+CHECKOUT ? 
+Berpindah ke branch / commit yang lain
+
+PULL REQUEST?
+Cara kita meminta repo untuk 'mengambil' perubahan yang telah dilakukan
+
+MERGE?
+menggabungkan 2 buah branch
+
+MERGE CONFLICT ?
+Ketika baris yang sama diubah oleh 2 branch yang berbeda
+
+FORK
+Kita bisa membuat 'copy / duplikat' dari repo orang lain (beserta historynya)
+Jembatan antara repo original dan duplikatnya
+Kita dapat memodifikasi terhadap repo originalnya
+Dan berkontribusi pada repo orang lain
+Fork != Clone
+jika fork kita duplikat repository yang didalam akun github kita beserta hostory nya, sedangkan clone kita download repo nya dan memasukkannya ke computer kita 
+
+SCM (Source Code Management)
+GIT :
+Git Init => untuk menginisialisasi git pada local repo kita
+Git Add => untuk menambahkan file di staging area
+Git Status => Mengetahui status dari repo kita
+Git Commit => untuk melakukan commit pada repo kita
+Git Config => Memasukkan konfigugrasi pada git kita
+Git Branch => Untuk membuat branch pada repo kita
+Git Help => help pada git
+
+3 area yang dikenali git pada repo yang kita buat : 
+-> Working Tree
+-> Staging Area
+-> History
+
+GIT BRANCH & MERGE
+ada 2 jenis merge didalam git : Fast Forward & Three-way Merge
+Fast Forward terjadi ketika branch yang ingin kita gabungkan berada dalam jalur langsung / direct path
+
+sedangkan Three-way merge ketika di merge itu membuat commit baru dan branch yang dimerge itu pindah makanya ketika merge kirimkan pesannya juga
+
+cara penulisan : git branch <Nama branch>
+git checkout <nama branch> untuk mengganti branch
+git merge <nama branch>
+menghapus branch -d <nama branch> yang udah di merge dulu
+git branch --merged : digunakan untuk mengecek branch mana yang sudah di merge
+git branch -D <nama branch> untuk menghapus branch dan commit terakhir tidak peduli udah di merged atau belum
+
+GIT MERGE CONFLICT
+dimana kondisi kita nge merge suatu branch dan ada baris yang sama didalamnya, maka kita ngesholve sendiri
+
+GIT REMOTE
+dimana kita bisa membuat duplikat di repository github kita, dan kita bisa melacak perubahan yang kita lakukan mau dari remote kita atau yang berada di local computer kita 
+
+GIT PAGES
+Dimana kita bisa mendeploy website statis kita ke github pages dengan menuliskan repo kita dengan nama : namarepo.github.io
+
+MULTIPLE REMOTE
+Cara kita bagaimana kita bisa terhubbung ke beberapa remote sekaligus
+git fetch <nama_remote> => untuk mengecek apakah di repo yang kita clone ada perubahan tidak ?
+git merge <nama remote yang dibuat di lokal>/<Nama branch>
+setelah itu kita push 
+
+BRANCH REMOTE
+cara penulisan buat branch sekalian dengan git checkout -b <nama_branch> kalau nama branch nya belum ada otomatis dibuatkan
+
+
+.GITIGNORE
+adalah sebuah file dimana kita bisa meyimpan filenya ke dalam repository git kita 
+
+GIT REBASE
+adalah cara lain yang tidak menggunakan merging
+git rebase <nama_branch>
